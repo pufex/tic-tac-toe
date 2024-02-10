@@ -1,0 +1,154 @@
+:root{
+    --first-color: #e7eaf6;   
+    --second-color: #a2a8d3; 
+    --third-color: #38598b;
+    --fourth-color: #113f67; 
+    --o-color: #ff0000;
+    --x-color: #008000;
+    --reset-button: navy;
+    --reset-button-hover: rgb(2, 2, 191);
+    --restart-button: black;
+    --restart-button-hover: rgb(64, 64, 64);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    padding-top: 100px;
+    min-height: 100vh;
+    width: 100%;
+    background-color: var(--fourth-color);
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    width: 100%;
+    max-width: 600px;
+}
+
+.main-header{
+    width: 100%;
+    text-align: center;
+    font-size: 4rem;
+    color: var(--first-color);
+    font-weight: 700;
+}
+
+.scores-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+.score{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.score-amount{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--second-color);
+    color: var(--fourth-color);
+    font-size: 2rem;
+    font-weight: 700;
+    padding: 1rem;
+    border: 1px solid var(--first-color);
+    border-radius: 5px;
+}
+
+.o-markup{
+    color: var(--o-color);
+    font-weight: 700;
+    font-size: 2rem;
+}
+
+.x-markup{
+    color: var(--x-color);
+    font-weight: 700;
+    font-size: 2rem;
+}
+
+.info-container{
+    width: 100%;
+    padding: 0 2rem;
+}
+
+.info{
+    display: block;
+    width: 100%;
+    text-align: center;
+    font-size: 2rem;
+    color: var(--first-color);
+}
+
+.tic-tac-toe{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 1rem;
+    border-radius: 15px;
+    background-color: var(--first-color);
+}
+
+.position{
+    min-height: 10rem;
+    padding: 2rem;
+    background-color: var(--third-color);
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.position:hover{
+    background-color: var(--second-color);
+}
+
+.buttons{
+    display: flex;
+    justify-content: start;
+    gap: 1rem;
+}
+
+.button{
+    border: none;
+    outline: none;
+    border-radius: 7px;
+    height: 4rem;
+    width: 4rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--first-color);
+    font-family: 700;
+    font-size: 3rem;
+    cursor: pointer;
+}
+
+.reset-button{
+    background-color: var(--reset-button);
+}
+
+.reset-button:hover{
+    background-color: var(--reset-button-hover);
+}
+
+.restart-button{
+    background-color: var(--restart-button);
+}
+
+.restart-button:hover{
+    background-color: var(--restart-button-hover);
+}
+
