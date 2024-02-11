@@ -1,6 +1,9 @@
 const info = document.querySelector(".info");
 const gameContainer = document.querySelector(".tic-tac-toe");
 
+function playAudio(url) {
+  new Audio(url).play();
+}
 
 let playout = [
     [null, null, null],
@@ -65,6 +68,7 @@ const setGame = () => {;
             
             position.addEventListener("click", (event) => {
                 if(row[i] != null || comeout == true) return;
+                playAudio("/click-box.mp3");
                 row[i] = players[currentPlayer].name;
                 turn++;
                 position.innerText = row[i]; 
@@ -77,7 +81,7 @@ const setGame = () => {;
         }
     })
 }
-
+playAudio("/run-sound.wav");
 setGame();
 
 const restart = document.querySelector(".restart-button");
@@ -85,6 +89,7 @@ const restart = document.querySelector(".restart-button");
 restart.addEventListener("click", () => {
     playout = [[null, null, null],[null, null, null],[null, null, null],];
     
+    playAudio("/run-sound.wav");
     players[0].score = 0;
     players[0].scoreContainer.innerText = players[0].score;
     players[1].score = 0;
@@ -103,7 +108,7 @@ const reset = document.querySelector(".reset-button");
 
 reset.addEventListener("click", () => {
     playout = [[null, null, null],[null, null, null],[null, null, null],];
-    
+    playAudio("/reset.wav")
     turn = 0;
     currentPlayer = turn%2;
     disableGame = false;
