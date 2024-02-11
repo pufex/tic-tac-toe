@@ -99,20 +99,28 @@ body{
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr;
     gap: 1rem;
+    padding: 1rem;
     border-radius: 15px;
     background-color: var(--first-color);
 }
 
 .position{
+    display: flex;
+    align-items: center;
+    justify-content: center;
     min-height: 10rem;
     padding: 2rem;
     background-color: var(--third-color);
     border-radius: 5px;
     cursor: pointer;
+    font-size: 4rem;
+    font-weight: 700;
+    color: white;
 }
 
 .position:hover{
     background-color: var(--second-color);
+    transform: scale(1.02);
 }
 
 .buttons{
@@ -122,6 +130,7 @@ body{
 }
 
 .button{
+    position: relative;
     border: none;
     outline: none;
     border-radius: 7px;
@@ -130,10 +139,48 @@ body{
     display: flex;
     align-items: center;
     justify-content: center;
+    cursor: pointer;
+}
+
+.button-text{
+    display: inline;
     color: var(--first-color);
     font-family: 700;
     font-size: 3rem;
-    cursor: pointer;
+}
+
+.button:hover .info-space{
+    display: flex;
+}
+
+.info-space{
+    display: none;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    left: 50%;
+    bottom: calc(100% + 0.5rem);
+    transform: translateX(-50%);
+    padding: 1rem;
+    background-color: black;
+    border-radius: 10px;
+}
+
+.info-message{
+    font-weight: 700;
+    color: white;
+    text-wrap: nowrap;
+}
+
+.info-arrow{
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 0.5rem;
+    width: 0.5rem;
+    clip-path: polygon(50% 100%, 0 0, 100% 0);
+    background-color: black;
 }
 
 .reset-button{
